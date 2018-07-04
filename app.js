@@ -41,7 +41,13 @@ let recognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
 bot.recognizer(recognizer);
 
 bot.dialog('Help', (session) => {
-    session.endDialog(`try 'show me the menu', 'what can i order?' or 'i want to eat'`);
+    session.endDialog(`Hello!, try asking me 'what can i order?', 'show me the menu' or 'i want to eat'`);
 }).triggerAction({
     matches: 'Help'
+});
+
+bot.dialog('Order', (session) => {
+    session.endDialog(`Here's the Menu`);
+}).triggerAction({
+    matches: 'Order'
 });

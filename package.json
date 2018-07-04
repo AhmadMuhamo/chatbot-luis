@@ -29,6 +29,7 @@
   "dependencies": {
     "botbuilder": "^3.15.0",
     "dotenv-extended": "^2.0.2",
+    "hoek": "^5.0.3",
     "restify": "^7.2.1"
   }
 }
